@@ -1,77 +1,152 @@
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) { 
+and (max-width : 480px) { 
   $column_width: 320px;
   $thumbnail_width: $column_width - 60;
   
   header {
     .posts-nav-links {
-      padding-top: 12px;
+      position: absolute;
+      top: 0em;
+      right: 0;
+      text-align:right;
+      padding: 0;
+      margin-left: 1.5em;
+      font-size: 0.8em;
+      margin-bottom: 0;
     }
     .primary-menu {
-      width: $column_width - 32;
-      position: fixed;
-      left: 12px;
-      top: 0;
-      margin: 0;
-      ul li ul.sub-menu {
-        position: fixed;
-        left: 12px;
-        top: 48px;
-        margin-left: 20px;
-        width: $column_width - 32;
-        li:first-child {
-          margin-left: 0;
-        }
-      }
+      font-size: 1.25em;
+    	position: static;
+      top: 0px;
+      left: 0px;
+    	background-color: none;
+      z-index: 100;
+      width: 100%;
+      padding: 0;
+      height: auto;
+      margin-bottom: -80px;
+    	ul {
+    		position: relative;
+    		display: block;
+    		padding: 0 0.5em;
+    		color: #fff;
+    		font-size: 0.75em;
+    		li {
+          //border: #666 solid 1px;
+          border: 0;
+    			display: block;
+    			margin: 0 1em;
+          padding: 0.25em;
+          position: relative;
+    			a {
+    				color: #666;
+    				text-decoration: none;
+    			}
+    			a:hover {
+    				color: #ccc;
+    			}
+          ul.sub-menu {
+          	font-size: 1.0em;
+          	margin: 0;
+          	display: none;
+          	position: absolute;
+            top: 0px;
+            left: 40%;
+            width: 60%;
+            padding: 0;
+          	li {
+              border: none;
+              position: static;
+              display: block;
+          	}
+          }
+    		}
+    		li.current-menu-item {
+    			a { color: #888; }
+    			a:hover { color: #888; }
+    		}
+    	}
     }
+  }
+  
+  body {
+    padding: 0;
   }
   
   /* Styles for block display on home page */
-  body.home #main, body.archive #main {
-    overflow-x: hidden;
-    #feed-container {
-      position: relative;
-      left: 32px;
-      margin: 0;
-    }
-  	.article-container-wrapper {
-  		width: $column_width + 20;
-    	.article-container {
-    		/* Need to still scroll, while hiding overflow-y scrollbars */
-    		width: $column_width - 32;
-    		article.post {
-    			width: $thumbnail_width - 32;
-    		}
-    	}
-  	}
-    .article-container-wrapper:last-child {
-      width: $column_width + 20;
-    }
-  	.post-thumbnail {
-  		max-width: $thumbnail_width - 32;
-  		img {
-  			max-width: $thumbnail_width - 32;
-  		}
-  	}
-    div.comments-container, article.post, article.event {
-      p {
-        width: $thumbnail_width - 32;
-        img {
-          max-width: $thumbnail_width - 32;
+  body.single, body.archive, body.home, body.page {
+    #main {
+      overflow-x: hidden;
+      position: static;
+      #feed-container {
+        position: static;
+        margin: 0;
+        padding: 0;
+      }
+      article.post {
+        .post-thumbnail {
+          img {
+            width: 278px;
+            height:auto;
+          }
         }
       }
+    	.article-container-wrapper {
+        display: block;
+        clear: both;
+        max-width: 100%;
+      	.article-container {
+      		width: auto;
+          margin: 0;
+          article.post {
+            width: 278px;
+            margin: inherit -2px;
+            .post-thumbnail {
+              img {
+                width: 278px;
+                height: auto;
+              }
+            }
+          }
+      	}
+    	}
+      .article-container-wrapper:last-child {
+        width: $column_width + 20;
+      }
+      div.comments-container, article.post, article.event {
+        p {
+          width: 100%;
+        }
+      }
+      #home-sidebar, aside.sidebar {
+        width: $column_width - 24;
+        padding-left: 24px;
+        margin-bottom: 2em;
+      }
     }
-    #home-sidebar, aside.sidebar {
-      width: $column_width - 20;
-      
+    #main.horizontal {
+      .content {
+        .article-container {
+          article.post {
+            .post-thumbnail {
+              clear: both;
+              float: none;
+              width: 278px;
+              height: auto;
+              margin: 1em auto;
+              img {
+                width: 278px;
+                height: auto;
+              }
+            }
+            margin-left: 0;
+            max-width: 278px;
+          }
+        }
+      }
+      #home-sidebar, aside.sidebar {
+        margin-left: 0;
+      }
     }
   }
-}
-
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (orientation : portrait) { 
-  
 }

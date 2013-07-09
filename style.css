@@ -352,47 +352,108 @@ body.home #main.horizontal, body.archive #main.horizontal {
   height: auto;
   width: 320px; }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
   header .posts-nav-links {
-    padding-top: 12px; }
+    position: absolute;
+    top: 0em;
+    right: 0;
+    text-align: right;
+    padding: 0;
+    margin-left: 1.5em;
+    font-size: 0.8em;
+    margin-bottom: 0; }
   header .primary-menu {
-    width: 288px;
-    position: fixed;
-    left: 12px;
-    top: 0;
-    margin: 0; }
-    header .primary-menu ul li ul.sub-menu {
-      position: fixed;
-      left: 12px;
-      top: 48px;
-      margin-left: 20px;
-      width: 288px; }
-      header .primary-menu ul li ul.sub-menu li:first-child {
-        margin-left: 0; }
+    font-size: 1.25em;
+    position: static;
+    top: 0px;
+    left: 0px;
+    background-color: none;
+    z-index: 100;
+    width: 100%;
+    padding: 0;
+    height: auto;
+    margin-bottom: -80px; }
+    header .primary-menu ul {
+      position: relative;
+      display: block;
+      padding: 0 0.5em;
+      color: #fff;
+      font-size: 0.75em; }
+      header .primary-menu ul li {
+        border: 0;
+        display: block;
+        margin: 0 1em;
+        padding: 0.25em;
+        position: relative; }
+        header .primary-menu ul li a {
+          color: #666;
+          text-decoration: none; }
+        header .primary-menu ul li a:hover {
+          color: #ccc; }
+        header .primary-menu ul li ul.sub-menu {
+          font-size: 1.0em;
+          margin: 0;
+          display: none;
+          position: absolute;
+          top: 0px;
+          left: 40%;
+          width: 60%;
+          padding: 0; }
+          header .primary-menu ul li ul.sub-menu li {
+            border: none;
+            position: static;
+            display: block; }
+      header .primary-menu ul li.current-menu-item a {
+        color: #888; }
+      header .primary-menu ul li.current-menu-item a:hover {
+        color: #888; }
+
+  body {
+    padding: 0; }
 
   /* Styles for block display on home page */
-  body.home #main, body.archive #main {
-    overflow-x: hidden; }
-    body.home #main #feed-container, body.archive #main #feed-container {
-      position: relative;
-      left: 32px;
-      margin: 0; }
-    body.home #main .article-container-wrapper, body.archive #main .article-container-wrapper {
+  body.single #main, body.archive #main, body.home #main, body.page #main {
+    overflow-x: hidden;
+    position: static; }
+    body.single #main #feed-container, body.archive #main #feed-container, body.home #main #feed-container, body.page #main #feed-container {
+      position: static;
+      margin: 0;
+      padding: 0; }
+    body.single #main article.post .post-thumbnail img, body.archive #main article.post .post-thumbnail img, body.home #main article.post .post-thumbnail img, body.page #main article.post .post-thumbnail img {
+      width: 278px;
+      height: auto; }
+    body.single #main .article-container-wrapper, body.archive #main .article-container-wrapper, body.home #main .article-container-wrapper, body.page #main .article-container-wrapper {
+      display: block;
+      clear: both;
+      max-width: 100%; }
+      body.single #main .article-container-wrapper .article-container, body.archive #main .article-container-wrapper .article-container, body.home #main .article-container-wrapper .article-container, body.page #main .article-container-wrapper .article-container {
+        width: auto;
+        margin: 0; }
+        body.single #main .article-container-wrapper .article-container article.post, body.archive #main .article-container-wrapper .article-container article.post, body.home #main .article-container-wrapper .article-container article.post, body.page #main .article-container-wrapper .article-container article.post {
+          width: 278px;
+          margin: inherit -2px; }
+          body.single #main .article-container-wrapper .article-container article.post .post-thumbnail img, body.archive #main .article-container-wrapper .article-container article.post .post-thumbnail img, body.home #main .article-container-wrapper .article-container article.post .post-thumbnail img, body.page #main .article-container-wrapper .article-container article.post .post-thumbnail img {
+            width: 278px;
+            height: auto; }
+    body.single #main .article-container-wrapper:last-child, body.archive #main .article-container-wrapper:last-child, body.home #main .article-container-wrapper:last-child, body.page #main .article-container-wrapper:last-child {
       width: 340px; }
-      body.home #main .article-container-wrapper .article-container, body.archive #main .article-container-wrapper .article-container {
-        /* Need to still scroll, while hiding overflow-y scrollbars */
-        width: 288px; }
-        body.home #main .article-container-wrapper .article-container article.post, body.archive #main .article-container-wrapper .article-container article.post {
-          width: 228px; }
-    body.home #main .article-container-wrapper:last-child, body.archive #main .article-container-wrapper:last-child {
-      width: 340px; }
-    body.home #main .post-thumbnail, body.archive #main .post-thumbnail {
-      max-width: 228px; }
-      body.home #main .post-thumbnail img, body.archive #main .post-thumbnail img {
-        max-width: 228px; }
-    body.home #main div.comments-container p, body.home #main article.post p, body.home #main article.event p, body.archive #main div.comments-container p, body.archive #main article.post p, body.archive #main article.event p {
-      width: 228px; }
-      body.home #main div.comments-container p img, body.home #main article.post p img, body.home #main article.event p img, body.archive #main div.comments-container p img, body.archive #main article.post p img, body.archive #main article.event p img {
-        max-width: 228px; }
-    body.home #main #home-sidebar, body.home #main aside.sidebar, body.archive #main #home-sidebar, body.archive #main aside.sidebar {
-      width: 300px; } }
+    body.single #main div.comments-container p, body.single #main article.post p, body.single #main article.event p, body.archive #main div.comments-container p, body.archive #main article.post p, body.archive #main article.event p, body.home #main div.comments-container p, body.home #main article.post p, body.home #main article.event p, body.page #main div.comments-container p, body.page #main article.post p, body.page #main article.event p {
+      width: 100%; }
+    body.single #main #home-sidebar, body.single #main aside.sidebar, body.archive #main #home-sidebar, body.archive #main aside.sidebar, body.home #main #home-sidebar, body.home #main aside.sidebar, body.page #main #home-sidebar, body.page #main aside.sidebar {
+      width: 296px;
+      padding-left: 24px;
+      margin-bottom: 2em; }
+  body.single #main.horizontal .content .article-container article.post, body.archive #main.horizontal .content .article-container article.post, body.home #main.horizontal .content .article-container article.post, body.page #main.horizontal .content .article-container article.post {
+    margin-left: 0;
+    max-width: 278px; }
+    body.single #main.horizontal .content .article-container article.post .post-thumbnail, body.archive #main.horizontal .content .article-container article.post .post-thumbnail, body.home #main.horizontal .content .article-container article.post .post-thumbnail, body.page #main.horizontal .content .article-container article.post .post-thumbnail {
+      clear: both;
+      float: none;
+      width: 278px;
+      height: auto;
+      margin: 1em auto; }
+      body.single #main.horizontal .content .article-container article.post .post-thumbnail img, body.archive #main.horizontal .content .article-container article.post .post-thumbnail img, body.home #main.horizontal .content .article-container article.post .post-thumbnail img, body.page #main.horizontal .content .article-container article.post .post-thumbnail img {
+        width: 278px;
+        height: auto; }
+  body.single #main.horizontal #home-sidebar, body.single #main.horizontal aside.sidebar, body.archive #main.horizontal #home-sidebar, body.archive #main.horizontal aside.sidebar, body.home #main.horizontal #home-sidebar, body.home #main.horizontal aside.sidebar, body.page #main.horizontal #home-sidebar, body.page #main.horizontal aside.sidebar {
+    margin-left: 0; } }
