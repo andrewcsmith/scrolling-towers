@@ -1,0 +1,19 @@
+#feed-container {
+  .bx-viewport {
+    height: auto;
+    width: 360px;
+  }
+  .bx-wrapper {
+    margin-bottom: 10px;
+  }
+  .pager-wrapper {
+    margin-bottom: 45px;
+  }
+  .bxslider-gallery.adaptive-height-off .gallery-wrapper .bxslider img {
+    height: auto;
+    width: 320px;
+  }
+  .bx-pager {
+    // bottom: 0;
+  }
+}

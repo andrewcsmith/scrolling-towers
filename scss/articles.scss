@@ -1,0 +1,244 @@
+/*
+Nav and menu headers for SCSS
+*/
+
+$column_width: 420px;
+$thumbnail_width: $column_width - 60;
+
+$main_column: 640px;
+$main_featured: $main_column;
+
+$pink: #c31253;
+
+@mixin grey_post_meta {
+	.post-meta {
+		margin: 0.25em 0 0.5em;
+		color: #aaa;
+		font-size: 12px;
+		text-align: right;
+    .author {
+      display: none;
+    }
+	}
+}
+
+body {
+	color: inherit;
+  .ui-loader {
+    display: none;
+  }
+}
+
+#main {
+	width: 100%;
+  overflow: hidden;
+	/* 	padding-top must = the size of the menubar
+			and should also be the same as the offset in footer.php */
+	padding: 80px 0px 0px;
+	div.comments-container, article.post, article.event {
+		max-width: $column_width + 120;
+		overflow-x: hidden;
+		background-color: #fff;
+		margin: 24px auto 0;
+		padding: 0 20px;
+		font-size: 0.8em;
+    header {
+      border-bottom: 1px dotted #ccc;
+      margin-bottom: 1.5em;
+    }
+		h1, h2, h3 {
+			text-align: center;
+			font-family: Georgia, serif;
+			font-size: 1.5em;
+			font-weight: normal;
+			padding: 1em;
+			a {
+				text-decoration: none;
+				color: #000;
+			}
+		}
+    p {
+      width: $thumbnail_width;
+      margin: 1em auto;
+      img {
+        max-width: 360px;
+        height: auto;
+      }
+    }
+	}
+  article.post, .right {
+    border: #666 1px solid;
+  }
+	article.post, article.event {
+		padding: 0 20px 20px;
+		header h2 {
+			text-align: center;
+		}
+		.post-thumbnail {
+			max-width: $main_featured;
+			margin: 0 auto;
+			img {
+				max-width: $main_featured;
+				height: auto;
+			}
+		}
+    a {
+      color: $pink;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+	}
+	article.category-empty {
+		#searchform {
+			text-align: center;
+		}
+	}
+}
+
+/* Styles for block display on home page */
+body.home #main, body.archive #main {
+	/* We will keep the scroll bars on the overflow-x */
+	overflow-x: auto;
+	position: relative;
+	#feed-container {
+		overflow-x: visible;
+		overflow-y: visible;
+		width: 3600px;
+		padding: 32px 20px -200px 32px;
+		margin: 0 -32px auto 32px;
+		z-index: 10;
+/*		position: relative;*/
+	}
+	.article-container-wrapper {
+		overflow: hidden;
+		width: $column_width + 20;
+		display: block;
+		float: left;
+  	.article-container {
+  		/* Need to still scroll, while hiding overflow-y scrollbars */
+  		overflow-x: hidden;
+  		overflow-y: auto;
+  		width: $column_width;
+  		padding-right: 80px;
+  		article.post {
+  			margin: 0px 20px 20px 20px;
+  			padding: 16px 20px 20px 20px;
+  			width: 360px;
+  			overflow: hidden;
+  			position: static;
+  			header h2, header h3 {
+  				text-align: center;
+          margin-bottom: 1em;
+  			}
+        @include grey_post_meta;
+  		}
+  		article.post:first-child { margin-left: 0; }
+  		article.post:last-child { margin-right: 2em; }
+  	}
+	}
+  .article-container-wrapper:last-child {
+    width: $column_width + 20;
+  }
+	.post-thumbnail {
+		margin: -10px auto 1em;
+		max-width: $thumbnail_width;
+		img {
+			max-width: $thumbnail_width;
+			height: auto;
+		}
+	}
+}
+
+article footer {
+	font-size: 0.8em;
+	color: #666;
+}
+article {
+  nav {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px dotted #ccc;
+    div {
+      display: inline;
+      float: left;
+      text-align: center;
+    }
+    div:first-child {
+      text-align: right;
+      margin-right: 2%;
+      width: 46%;
+    }
+    div:last-child {
+      text-align: left;
+      margin-left: 2%;
+      width: 46%;
+    } 
+  }
+}
+
+// Sidebar info
+body.home #main, body.archive #main {
+  #home-sidebar, aside.sidebar {
+    font-size: 0.8em;
+    width: 240px;
+    margin-right: 40px;
+    // margin-bottom: 40px;
+    .article-container {
+      width: 240px;
+      margin-right: 20px;
+    }
+    section {
+      h2.widgettitle {
+        font-family: Georgia, serif;
+        font-weight: 500;
+        margin-bottom: 0.5em;
+        border-bottom: 1px dotted #666;
+      }
+      .event-meta {
+        margin-bottom: -0.5em;
+      }
+      ul {
+        padding: 0;
+        li {
+          list-style-type: none;
+          width: 220px;
+          padding-left: 20px;
+          text-indent: -20px;
+        }
+      }
+    }
+  }
+  a {
+    color: $pink;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+.horizontal {
+  aside.sidebar {
+    margin-bottom: 40px;
+  }
+}
+
+// Event page
+article.event {
+  header .event-meta, header .event-venue {
+    display: inline;
+    color: #000;
+  }
+  header .event-info {
+    text-align: center;
+  }
+}
+
+// Specs for single posts
+body.single {
+  overflow-y: auto;
+  #main {
+    padding-bottom: 40px;
+  }
+}

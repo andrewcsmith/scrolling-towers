@@ -1,0 +1,93 @@
+/*
+Nav and menu headers for SCSS
+*/
+
+$pink: #c31253;
+
+@mixin shadow {
+  $offset: 1px;
+  -moz-box-shadow: $offset $offset $offset*1.5 $offset*2 #ccc;
+  -webkit-box-shadow: $offset $offset $offset*1.5 $offset*2 #ccc;
+  box-shadow: $offset $offset $offset*1.5 $offset*2 #ccc;
+}
+
+body {
+	color: inherit;
+  width: 100%;
+}
+#container {
+	position: relative;
+}
+.primary-menu {
+	position: absolute;
+	top: 0px;
+	background-color: none;
+	z-index: 100;
+  width: 80%;
+  padding: 0 16px;
+	ul {
+		position: relative;
+		display: block;
+		padding: 0 0.5em;
+		color: #fff;
+		font-size: 0.75em;
+		li {
+      //border: #666 solid 1px;
+      border: 0;
+			display: inline;
+			margin: 0 1em;
+      padding: 0.25em;
+      position: relative;
+			a {
+				color: #666;
+				text-decoration: none;
+			}
+			a:hover {
+				color: #ccc;
+			}
+      ul.sub-menu {
+      	font-size: 1.0em;
+      	margin: 0 -0.5em;
+      	display: none;
+      	position: absolute;
+        top: 2em;
+        left: -1em;
+        width: 40em;
+      	li {
+          border: none;
+          position: relative;
+          display: inline;
+      	}
+      }
+		}
+		li.current-menu-item {
+			a { color: #888; }
+			a:hover { color: #888; }
+		}
+	}
+}
+
+header {
+	h1 {
+		display: none;
+	}
+	.description {
+		display: none;
+	}
+  .posts-nav-links {
+    font-size: 0.8em;
+    padding: 20px 20px 0;
+    margin: 0 18px -60px;
+    color: #666;
+    float: right;
+    position: relative;
+    z-index: 120;
+    a {
+      color: $pink;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    };
+  }
+}

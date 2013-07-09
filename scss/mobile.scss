@@ -1,0 +1,77 @@
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) { 
+  $column_width: 320px;
+  $thumbnail_width: $column_width - 60;
+  
+  header {
+    .posts-nav-links {
+      padding-top: 12px;
+    }
+    .primary-menu {
+      width: $column_width - 32;
+      position: fixed;
+      left: 12px;
+      top: 0;
+      margin: 0;
+      ul li ul.sub-menu {
+        position: fixed;
+        left: 12px;
+        top: 48px;
+        margin-left: 20px;
+        width: $column_width - 32;
+        li:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  
+  /* Styles for block display on home page */
+  body.home #main, body.archive #main {
+    overflow-x: hidden;
+    #feed-container {
+      position: relative;
+      left: 32px;
+      margin: 0;
+    }
+  	.article-container-wrapper {
+  		width: $column_width + 20;
+    	.article-container {
+    		/* Need to still scroll, while hiding overflow-y scrollbars */
+    		width: $column_width - 32;
+    		article.post {
+    			width: $thumbnail_width - 32;
+    		}
+    	}
+  	}
+    .article-container-wrapper:last-child {
+      width: $column_width + 20;
+    }
+  	.post-thumbnail {
+  		max-width: $thumbnail_width - 32;
+  		img {
+  			max-width: $thumbnail_width - 32;
+  		}
+  	}
+    div.comments-container, article.post, article.event {
+      p {
+        width: $thumbnail_width - 32;
+        img {
+          max-width: $thumbnail_width - 32;
+        }
+      }
+    }
+    #home-sidebar, aside.sidebar {
+      width: $column_width - 20;
+      
+    }
+  }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { 
+  
+}

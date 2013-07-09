@@ -1,0 +1,395 @@
+/*
+Theme Name: Scrolling Towers 
+Theme URI: http://github.com/andrewcsmith/scrolling-towers
+Description: Based on the html5-boilerplate-for-wordpress theme, and the nonfeed theme from Cargo Collective.
+Version: 1.0
+Author: Andrew C. Smith
+Author URI: http://andrewchristophersmith.com/portfolio
+Tags: columns, portfolio
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+/*
+HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
+*/
+/* WordPress Required Styles */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.alignleft {
+  float: left; }
+
+.alignright {
+  float: right; }
+
+.wp-caption {
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding-top: 4px;
+  margin: 10px;
+  -moz-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+
+.wp-caption img {
+  margin: 0;
+  padding: 0;
+  border: 0 none; }
+
+.wp-caption-dd {
+  font-size: 11px;
+  line-height: 17px;
+  padding: 0 4px 5px;
+  margin: 0; }
+
+.sticky {
+  background: #f7f7f7;
+  padding: 0 10px 10px; }
+
+.sticky h2 {
+  padding-top: 10px; }
+
+body {
+  font-size: 16px;
+  background: #ddd;
+  overflow-x: hidden;
+  width: 100%; }
+
+/*
+Nav and menu headers for SCSS
+*/
+body {
+  color: inherit;
+  width: 100%; }
+
+#container {
+  position: relative; }
+
+.primary-menu {
+  position: absolute;
+  top: 0px;
+  background-color: none;
+  z-index: 100;
+  width: 80%;
+  padding: 0 16px; }
+  .primary-menu ul {
+    position: relative;
+    display: block;
+    padding: 0 0.5em;
+    color: #fff;
+    font-size: 0.75em; }
+    .primary-menu ul li {
+      border: 0;
+      display: inline;
+      margin: 0 1em;
+      padding: 0.25em;
+      position: relative; }
+      .primary-menu ul li a {
+        color: #666;
+        text-decoration: none; }
+      .primary-menu ul li a:hover {
+        color: #ccc; }
+      .primary-menu ul li ul.sub-menu {
+        font-size: 1.0em;
+        margin: 0 -0.5em;
+        display: none;
+        position: absolute;
+        top: 2em;
+        left: -1em;
+        width: 40em; }
+        .primary-menu ul li ul.sub-menu li {
+          border: none;
+          position: relative;
+          display: inline; }
+    .primary-menu ul li.current-menu-item a {
+      color: #888; }
+    .primary-menu ul li.current-menu-item a:hover {
+      color: #888; }
+
+header h1 {
+  display: none; }
+header .description {
+  display: none; }
+header .posts-nav-links {
+  font-size: 0.8em;
+  padding: 20px 20px 0;
+  margin: 0 18px -60px;
+  color: #666;
+  float: right;
+  position: relative;
+  z-index: 120; }
+  header .posts-nav-links a {
+    color: #c31253;
+    text-decoration: none; }
+  header .posts-nav-links a:hover {
+    text-decoration: underline; }
+
+/*
+Nav and menu headers for SCSS
+*/
+body {
+  color: inherit; }
+  body .ui-loader {
+    display: none; }
+
+#main {
+  width: 100%;
+  overflow: hidden;
+  /* 	padding-top must = the size of the menubar
+  		and should also be the same as the offset in footer.php */
+  padding: 80px 0px 0px; }
+  #main div.comments-container, #main article.post, #main article.event {
+    max-width: 540px;
+    overflow-x: hidden;
+    background-color: #fff;
+    margin: 24px auto 0;
+    padding: 0 20px;
+    font-size: 0.8em; }
+    #main div.comments-container header, #main article.post header, #main article.event header {
+      border-bottom: 1px dotted #ccc;
+      margin-bottom: 1.5em; }
+    #main div.comments-container h1, #main div.comments-container h2, #main div.comments-container h3, #main article.post h1, #main article.post h2, #main article.post h3, #main article.event h1, #main article.event h2, #main article.event h3 {
+      text-align: center;
+      font-family: Georgia, serif;
+      font-size: 1.5em;
+      font-weight: normal;
+      padding: 1em; }
+      #main div.comments-container h1 a, #main div.comments-container h2 a, #main div.comments-container h3 a, #main article.post h1 a, #main article.post h2 a, #main article.post h3 a, #main article.event h1 a, #main article.event h2 a, #main article.event h3 a {
+        text-decoration: none;
+        color: #000; }
+    #main div.comments-container p, #main article.post p, #main article.event p {
+      width: 360px;
+      margin: 1em auto; }
+      #main div.comments-container p img, #main article.post p img, #main article.event p img {
+        max-width: 360px;
+        height: auto; }
+  #main article.post, #main .right {
+    border: #666 1px solid; }
+  #main article.post, #main article.event {
+    padding: 0 20px 20px; }
+    #main article.post header h2, #main article.event header h2 {
+      text-align: center; }
+    #main article.post .post-thumbnail, #main article.event .post-thumbnail {
+      max-width: 640px;
+      margin: 0 auto; }
+      #main article.post .post-thumbnail img, #main article.event .post-thumbnail img {
+        max-width: 640px;
+        height: auto; }
+    #main article.post a, #main article.event a {
+      color: #c31253;
+      text-decoration: none; }
+    #main article.post a:hover, #main article.event a:hover {
+      text-decoration: underline; }
+  #main article.category-empty #searchform {
+    text-align: center; }
+
+/* Styles for block display on home page */
+body.home #main, body.archive #main {
+  /* We will keep the scroll bars on the overflow-x */
+  overflow-x: auto;
+  position: relative; }
+  body.home #main #feed-container, body.archive #main #feed-container {
+    overflow-x: visible;
+    overflow-y: visible;
+    width: 3600px;
+    padding: 32px 20px -200px 32px;
+    margin: 0 -32px auto 32px;
+    z-index: 10;
+    /*		position: relative;*/ }
+  body.home #main .article-container-wrapper, body.archive #main .article-container-wrapper {
+    overflow: hidden;
+    width: 440px;
+    display: block;
+    float: left; }
+    body.home #main .article-container-wrapper .article-container, body.archive #main .article-container-wrapper .article-container {
+      /* Need to still scroll, while hiding overflow-y scrollbars */
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 420px;
+      padding-right: 80px; }
+      body.home #main .article-container-wrapper .article-container article.post, body.archive #main .article-container-wrapper .article-container article.post {
+        margin: 0px 20px 20px 20px;
+        padding: 16px 20px 20px 20px;
+        width: 360px;
+        overflow: hidden;
+        position: static; }
+        body.home #main .article-container-wrapper .article-container article.post header h2, body.home #main .article-container-wrapper .article-container article.post header h3, body.archive #main .article-container-wrapper .article-container article.post header h2, body.archive #main .article-container-wrapper .article-container article.post header h3 {
+          text-align: center;
+          margin-bottom: 1em; }
+        body.home #main .article-container-wrapper .article-container article.post .post-meta, body.archive #main .article-container-wrapper .article-container article.post .post-meta {
+          margin: 0.25em 0 0.5em;
+          color: #aaa;
+          font-size: 12px;
+          text-align: right; }
+          body.home #main .article-container-wrapper .article-container article.post .post-meta .author, body.archive #main .article-container-wrapper .article-container article.post .post-meta .author {
+            display: none; }
+      body.home #main .article-container-wrapper .article-container article.post:first-child, body.archive #main .article-container-wrapper .article-container article.post:first-child {
+        margin-left: 0; }
+      body.home #main .article-container-wrapper .article-container article.post:last-child, body.archive #main .article-container-wrapper .article-container article.post:last-child {
+        margin-right: 2em; }
+  body.home #main .article-container-wrapper:last-child, body.archive #main .article-container-wrapper:last-child {
+    width: 440px; }
+  body.home #main .post-thumbnail, body.archive #main .post-thumbnail {
+    margin: -10px auto 1em;
+    max-width: 360px; }
+    body.home #main .post-thumbnail img, body.archive #main .post-thumbnail img {
+      max-width: 360px;
+      height: auto; }
+
+article footer {
+  font-size: 0.8em;
+  color: #666; }
+
+article nav {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px dotted #ccc; }
+  article nav div {
+    display: inline;
+    float: left;
+    text-align: center; }
+  article nav div:first-child {
+    text-align: right;
+    margin-right: 2%;
+    width: 46%; }
+  article nav div:last-child {
+    text-align: left;
+    margin-left: 2%;
+    width: 46%; }
+
+body.home #main #home-sidebar, body.home #main aside.sidebar, body.archive #main #home-sidebar, body.archive #main aside.sidebar {
+  font-size: 0.8em;
+  width: 240px;
+  margin-right: 40px; }
+  body.home #main #home-sidebar .article-container, body.home #main aside.sidebar .article-container, body.archive #main #home-sidebar .article-container, body.archive #main aside.sidebar .article-container {
+    width: 240px;
+    margin-right: 20px; }
+  body.home #main #home-sidebar section h2.widgettitle, body.home #main aside.sidebar section h2.widgettitle, body.archive #main #home-sidebar section h2.widgettitle, body.archive #main aside.sidebar section h2.widgettitle {
+    font-family: Georgia, serif;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    border-bottom: 1px dotted #666; }
+  body.home #main #home-sidebar section .event-meta, body.home #main aside.sidebar section .event-meta, body.archive #main #home-sidebar section .event-meta, body.archive #main aside.sidebar section .event-meta {
+    margin-bottom: -0.5em; }
+  body.home #main #home-sidebar section ul, body.home #main aside.sidebar section ul, body.archive #main #home-sidebar section ul, body.archive #main aside.sidebar section ul {
+    padding: 0; }
+    body.home #main #home-sidebar section ul li, body.home #main aside.sidebar section ul li, body.archive #main #home-sidebar section ul li, body.archive #main aside.sidebar section ul li {
+      list-style-type: none;
+      width: 220px;
+      padding-left: 20px;
+      text-indent: -20px; }
+body.home #main a, body.archive #main a {
+  color: #c31253;
+  text-decoration: none; }
+body.home #main a:hover, body.archive #main a:hover {
+  text-decoration: underline; }
+
+.horizontal aside.sidebar {
+  margin-bottom: 40px; }
+
+article.event header .event-meta, article.event header .event-venue {
+  display: inline;
+  color: #000; }
+article.event header .event-info {
+  text-align: center; }
+
+body.single {
+  overflow-y: auto; }
+  body.single #main {
+    padding-bottom: 40px; }
+
+/*
+Styles specifically for the Horizontal Template
+*/
+#main.horizontal {
+  overflow: auto;
+  position: static; }
+  #main.horizontal .content {
+    float: left;
+    width: auto;
+    margin: 0 20px 20px 0; }
+    #main.horizontal .content .article-container {
+      overflow: auto;
+      width: 100%;
+      padding: 0; }
+      #main.horizontal .content .article-container article.post {
+        margin: 0 0 20px; }
+      #main.horizontal .content .article-container .post-thumbnail {
+        float: left;
+        margin: 1em 1em 1em auto; }
+      #main.horizontal .content .article-container p {
+        width: auto; }
+    #main.horizontal .content .post-meta {
+      margin: 0.25em 0 0.5em;
+      color: #aaa;
+      font-size: 12px;
+      text-align: right; }
+  #main.horizontal aside.sidebar {
+    line-height: 1.4;
+    float: left;
+    width: 240px;
+    margin: auto -32px auto 32px; }
+  #main.horizontal .posts-nav-links {
+    text-align: center;
+    font-size: 0.8em; }
+
+#feed-container .bx-viewport {
+  height: auto;
+  width: 360px; }
+#feed-container .bx-wrapper {
+  margin-bottom: 10px; }
+#feed-container .pager-wrapper {
+  margin-bottom: 45px; }
+#feed-container .bxslider-gallery.adaptive-height-off .gallery-wrapper .bxslider img {
+  height: auto;
+  width: 320px; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  header .posts-nav-links {
+    padding-top: 12px; }
+  header .primary-menu {
+    width: 288px;
+    position: fixed;
+    left: 12px;
+    top: 0;
+    margin: 0; }
+    header .primary-menu ul li ul.sub-menu {
+      position: fixed;
+      left: 12px;
+      top: 48px;
+      margin-left: 20px;
+      width: 288px; }
+      header .primary-menu ul li ul.sub-menu li:first-child {
+        margin-left: 0; }
+
+  /* Styles for block display on home page */
+  body.home #main, body.archive #main {
+    overflow-x: hidden; }
+    body.home #main #feed-container, body.archive #main #feed-container {
+      position: relative;
+      left: 32px;
+      margin: 0; }
+    body.home #main .article-container-wrapper, body.archive #main .article-container-wrapper {
+      width: 340px; }
+      body.home #main .article-container-wrapper .article-container, body.archive #main .article-container-wrapper .article-container {
+        /* Need to still scroll, while hiding overflow-y scrollbars */
+        width: 288px; }
+        body.home #main .article-container-wrapper .article-container article.post, body.archive #main .article-container-wrapper .article-container article.post {
+          width: 228px; }
+    body.home #main .article-container-wrapper:last-child, body.archive #main .article-container-wrapper:last-child {
+      width: 340px; }
+    body.home #main .post-thumbnail, body.archive #main .post-thumbnail {
+      max-width: 228px; }
+      body.home #main .post-thumbnail img, body.archive #main .post-thumbnail img {
+        max-width: 228px; }
+    body.home #main div.comments-container p, body.home #main article.post p, body.home #main article.event p, body.archive #main div.comments-container p, body.archive #main article.post p, body.archive #main article.event p {
+      width: 228px; }
+      body.home #main div.comments-container p img, body.home #main article.post p img, body.home #main article.event p img, body.archive #main div.comments-container p img, body.archive #main article.post p img, body.archive #main article.event p img {
+        max-width: 228px; }
+    body.home #main #home-sidebar, body.home #main aside.sidebar, body.archive #main #home-sidebar, body.archive #main aside.sidebar {
+      width: 300px; } }
