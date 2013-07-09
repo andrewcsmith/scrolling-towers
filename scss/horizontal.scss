@@ -16,44 +16,48 @@ Styles specifically for the Horizontal Template
   	}
   }
 }
-
-#main.horizontal {
-  overflow: auto;
-  position: static;
-  .content {
-    float: left;
-    width: auto;
-    margin: 0 20px 20px 0;
-    .article-container {
-      overflow: auto;
-      width: 100%;
-      padding: 0;
-      article.post {
-        margin: 0 0 20px;
-      }
-      .post-thumbnail {
-        float: left;
-        margin: 1em 1em 1em auto;
-      }
-      p {
+body.home, body.archive {
+  #main.horizontal {
+    overflow: auto;
+    position: static;
+    .content {
+      float: left;
+      max-width: 538px;
+      min-width: 240px;
+      margin: 0 20px 20px 0;
+      .article-container {
+        overflow: auto;
         width: auto;
+        padding: 0;
+        article.post {
+          margin: 0 0 20px 32px;
+          min-width: 240px;
+        }
+        .post-thumbnail {
+          float: left;
+          margin: 1em 1em 1em auto;
+        }
+        p {
+          width: auto;
+          min-width:240px;
+        }
       }
+    	.post-meta {
+    		margin: 0.25em 0 0.5em;
+    		color: #aaa;
+    		font-size: 12px;
+    		text-align: right;
+    	}
     }
-  	.post-meta {
-  		margin: 0.25em 0 0.5em;
-  		color: #aaa;
-  		font-size: 12px;
-  		text-align: right;
-  	}
-  }
-  aside.sidebar {
-    line-height: 1.4;
-    float: left;
-    width: 240px;
-    margin: auto -32px auto 32px;
-  }
-  .posts-nav-links {
-    text-align: center;
-    font-size: 0.8em;
-  }
+    aside.sidebar {
+      line-height: 1.4;
+      float: left;
+      width: 240px;
+      margin: auto 0px 32px 32px;
+    }
+    .posts-nav-links {
+      text-align: center;
+      font-size: 0.8em;
+    }
+  } 
 }
