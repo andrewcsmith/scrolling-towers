@@ -1,8 +1,10 @@
 var height_change_callback = function() {
-  var bodyheight = jQuery(window).height();
-  jQuery("#feed-container .article-container").each(function() {
-		jQuery(this).css("height", bodyheight-80);
-	});
+  if(($('.primary-menu').css('font-size') != '20px')) {
+    var bodyheight = jQuery(window).height();
+    jQuery("#feed-container .article-container").each(function() {
+  		jQuery(this).css("height", bodyheight-80);
+  	});
+  }
 }
 var width_change_callback = function() {
 	var bodywidth = jQuery(window).width();
@@ -36,7 +38,7 @@ jQuery(function() {
 
 // If the namenav.gif image exists, replaces the home button with it.
 jQuery(function() {
-  var icon_url = '/images/namenav.gif';
+  var icon_url = 'http://www.bethobrien.com/images/namenav.gif';
   jQuery.ajax({
     url:icon_url,
     type:'HEAD',
@@ -44,9 +46,9 @@ jQuery(function() {
       jQuery(".menu-item-home a").html("Home");
     },
     success: function() {
-      if(!$('#feed-container').css('margin') == '0px'){
+      // if(!$('#feed-container').css('margin') == '0px'){
       jQuery(".menu-item-home a").html("<img src=\""+ icon_url + "\">")}
-    }
+    // }
   });
 });
 

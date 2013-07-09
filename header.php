@@ -51,7 +51,7 @@
     <header role="banner">
       <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
       <p class="description"><?php bloginfo('description'); ?></p>
-			<div class="posts-nav-links"><?php posts_nav_link( ' | ', __('View Newer Entries'), __('View Older Entries') ); ?></div>
+			<div class="posts-nav-links"><?php posts_nav_link( '<br />', __('View Newer Entries'), __('View Older Entries') ); ?></div>
 			<?php wp_nav_menu( array(
 				'theme_location' => 'primary-menu',
 				'container' => 'nav',
