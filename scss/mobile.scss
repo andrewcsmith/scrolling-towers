@@ -15,17 +15,7 @@ and (max-width : 480px) {
       font-size: 0.8em;
       margin-bottom: 0;
     }
-    #mobile-menu-link {
-      position: static;
-      text-align: center;
-      display: block;
-      width: 278px;
-      background-color: #fff;
-      padding: 12px 20px;
-      margin: 1em auto;
-      border: 1px solid black;
-    }
-    .primary-menu {
+    .primary-menu, #mobile-menu-link {
       #menu-primary-menu {
         display: none;
       }
@@ -83,6 +73,19 @@ and (max-width : 480px) {
     		}
     	}
     }
+    #mobile-menu-link {
+//      position: static;
+//      text-align: center;
+      display: block;
+      font-size: 1em;
+      a {
+      	color: #666;
+      	text-decoration: none;
+      }
+      a:hover {
+      	color: #ccc;
+      }
+    }
   }
   
   body {
@@ -116,7 +119,7 @@ and (max-width : 480px) {
         width: 100%;
       	.article-container {
       		width: 100%;
-          margin: 0;
+          margin: 1em 0;
           article.post {
             width: 278px;
             margin: 1em auto;
@@ -133,7 +136,7 @@ and (max-width : 480px) {
       	}
     	}
       .article-container-wrapper:last-child {
-        width: $column_width + 20;
+        width: 100%;
       }
       div.comments-container, article.post, article.event {
         p {
@@ -151,8 +154,13 @@ and (max-width : 480px) {
       }
     }
     #main.horizontal {
+      width: 100%;
       .content {
+        float: none;
+        width: 100%;
         .article-container {
+          width: 320px;
+          margin: 1em auto;
           article.post {
             .post-thumbnail {
               clear: both;
@@ -165,13 +173,19 @@ and (max-width : 480px) {
                 height: auto;
               }
             }
-//            margin-left: 0;
-            max-width: 278px;
+          }
+          article.post:last-child {
+            margin: 0 auto;
           }
         }
       }
       #home-sidebar, aside.sidebar {
-        margin-left: 0;
+        width: 100%;
+        margin: 0 auto 2em;
+        section {
+          width: 278px;
+          margin: 1em auto;
+        }
       }
     }
   }
