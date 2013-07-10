@@ -136,6 +136,12 @@ body {
   color: inherit; }
   body .ui-loader {
     display: none; }
+  body a {
+    color: #0d3fa8;
+    text-decoration: none; }
+
+header #mobile-menu-link {
+  display: none; }
 
 #main {
   width: 100%;
@@ -181,7 +187,7 @@ body {
         max-width: 640px;
         height: auto; }
     #main article.post a, #main article.event a {
-      color: #c31253;
+      color: #0d3fa8;
       text-decoration: none; }
     #main article.post a:hover, #main article.event a:hover {
       text-decoration: underline; }
@@ -284,7 +290,7 @@ body.home #main #home-sidebar, body.home #main aside.sidebar, body.archive #main
       padding-left: 20px;
       text-indent: -20px; }
 body.home #main a, body.archive #main a {
-  color: #c31253;
+  color: #0d3fa8;
   text-decoration: none; }
 body.home #main a:hover, body.archive #main a:hover {
   text-decoration: underline; }
@@ -354,6 +360,7 @@ body.home #main.horizontal, body.archive #main.horizontal {
 
 @media only screen and (max-width: 480px) {
   header .posts-nav-links {
+    display: none;
     position: absolute;
     top: 0em;
     right: 0;
@@ -362,9 +369,19 @@ body.home #main.horizontal, body.archive #main.horizontal {
     margin-left: 1.5em;
     font-size: 0.8em;
     margin-bottom: 0; }
+  header #mobile-menu-link {
+    position: static;
+    text-align: center;
+    display: block;
+    width: 278px;
+    background-color: #fff;
+    padding: 12px 20px;
+    margin: 1em auto;
+    border: 1px solid black; }
   header .primary-menu {
     font-size: 1.25em;
     position: static;
+    text-align: center;
     top: 0px;
     left: 0px;
     background-color: none;
@@ -372,7 +389,9 @@ body.home #main.horizontal, body.archive #main.horizontal {
     width: 100%;
     padding: 0;
     height: auto;
-    margin-bottom: -80px; }
+    margin-bottom: 0px; }
+    header .primary-menu #menu-primary-menu {
+      display: none; }
     header .primary-menu ul {
       position: relative;
       display: block;
@@ -391,13 +410,10 @@ body.home #main.horizontal, body.archive #main.horizontal {
         header .primary-menu ul li a:hover {
           color: #ccc; }
         header .primary-menu ul li ul.sub-menu {
-          font-size: 1.0em;
+          font-size: 0.8em;
           margin: 0;
-          display: none;
-          position: absolute;
-          top: 0px;
-          left: 40%;
-          width: 60%;
+          display: inline;
+          position: static;
           padding: 0; }
           header .primary-menu ul li ul.sub-menu li {
             border: none;
@@ -414,37 +430,45 @@ body.home #main.horizontal, body.archive #main.horizontal {
   /* Styles for block display on home page */
   body.single #main, body.archive #main, body.home #main, body.page #main {
     overflow-x: hidden;
-    position: static; }
+    position: static;
+    padding: 0; }
     body.single #main #feed-container, body.archive #main #feed-container, body.home #main #feed-container, body.page #main #feed-container {
       position: static;
       margin: 0;
-      padding: 0; }
-    body.single #main article.post .post-thumbnail img, body.archive #main article.post .post-thumbnail img, body.home #main article.post .post-thumbnail img, body.page #main article.post .post-thumbnail img {
-      width: 278px;
-      height: auto; }
+      padding: 0;
+      width: 100%; }
+    body.single #main article.post, body.archive #main article.post, body.home #main article.post, body.page #main article.post {
+      margin: 0 auto; }
+      body.single #main article.post .post-thumbnail img, body.archive #main article.post .post-thumbnail img, body.home #main article.post .post-thumbnail img, body.page #main article.post .post-thumbnail img {
+        width: 278px;
+        height: auto; }
     body.single #main .article-container-wrapper, body.archive #main .article-container-wrapper, body.home #main .article-container-wrapper, body.page #main .article-container-wrapper {
       display: block;
       clear: both;
-      max-width: 100%; }
+      width: 100%; }
       body.single #main .article-container-wrapper .article-container, body.archive #main .article-container-wrapper .article-container, body.home #main .article-container-wrapper .article-container, body.page #main .article-container-wrapper .article-container {
-        width: auto;
+        width: 100%;
         margin: 0; }
         body.single #main .article-container-wrapper .article-container article.post, body.archive #main .article-container-wrapper .article-container article.post, body.home #main .article-container-wrapper .article-container article.post, body.page #main .article-container-wrapper .article-container article.post {
           width: 278px;
-          margin: inherit -2px; }
+          margin: 1em auto; }
           body.single #main .article-container-wrapper .article-container article.post .post-thumbnail img, body.archive #main .article-container-wrapper .article-container article.post .post-thumbnail img, body.home #main .article-container-wrapper .article-container article.post .post-thumbnail img, body.page #main .article-container-wrapper .article-container article.post .post-thumbnail img {
             width: 278px;
             height: auto; }
+        body.single #main .article-container-wrapper .article-container article.post:last-child, body.archive #main .article-container-wrapper .article-container article.post:last-child, body.home #main .article-container-wrapper .article-container article.post:last-child, body.page #main .article-container-wrapper .article-container article.post:last-child {
+          margin: 0 auto; }
     body.single #main .article-container-wrapper:last-child, body.archive #main .article-container-wrapper:last-child, body.home #main .article-container-wrapper:last-child, body.page #main .article-container-wrapper:last-child {
       width: 340px; }
     body.single #main div.comments-container p, body.single #main article.post p, body.single #main article.event p, body.archive #main div.comments-container p, body.archive #main article.post p, body.archive #main article.event p, body.home #main div.comments-container p, body.home #main article.post p, body.home #main article.event p, body.page #main div.comments-container p, body.page #main article.post p, body.page #main article.event p {
       width: 100%; }
     body.single #main #home-sidebar, body.single #main aside.sidebar, body.archive #main #home-sidebar, body.archive #main aside.sidebar, body.home #main #home-sidebar, body.home #main aside.sidebar, body.page #main #home-sidebar, body.page #main aside.sidebar {
-      width: 296px;
-      padding-left: 24px;
+      width: 100%;
       margin-bottom: 2em; }
+      body.single #main #home-sidebar .article-container, body.single #main aside.sidebar .article-container, body.archive #main #home-sidebar .article-container, body.archive #main aside.sidebar .article-container, body.home #main #home-sidebar .article-container, body.home #main aside.sidebar .article-container, body.page #main #home-sidebar .article-container, body.page #main aside.sidebar .article-container {
+        width: 278px;
+        margin: 0 auto;
+        padding: 0 20px; }
   body.single #main.horizontal .content .article-container article.post, body.archive #main.horizontal .content .article-container article.post, body.home #main.horizontal .content .article-container article.post, body.page #main.horizontal .content .article-container article.post {
-    margin-left: 0;
     max-width: 278px; }
     body.single #main.horizontal .content .article-container article.post .post-thumbnail, body.archive #main.horizontal .content .article-container article.post .post-thumbnail, body.home #main.horizontal .content .article-container article.post .post-thumbnail, body.page #main.horizontal .content .article-container article.post .post-thumbnail {
       clear: both;

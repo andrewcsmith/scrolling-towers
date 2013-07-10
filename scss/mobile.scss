@@ -5,6 +5,7 @@ and (max-width : 480px) {
   
   header {
     .posts-nav-links {
+      display: none;
       position: absolute;
       top: 0em;
       right: 0;
@@ -14,9 +15,23 @@ and (max-width : 480px) {
       font-size: 0.8em;
       margin-bottom: 0;
     }
+    #mobile-menu-link {
+      position: static;
+      text-align: center;
+      display: block;
+      width: 278px;
+      background-color: #fff;
+      padding: 12px 20px;
+      margin: 1em auto;
+      border: 1px solid black;
+    }
     .primary-menu {
+      #menu-primary-menu {
+        display: none;
+      }
       font-size: 1.25em;
     	position: static;
+      text-align: center;
       top: 0px;
       left: 0px;
     	background-color: none;
@@ -24,7 +39,7 @@ and (max-width : 480px) {
       width: 100%;
       padding: 0;
       height: auto;
-      margin-bottom: -80px;
+      margin-bottom: 0px;
     	ul {
     		position: relative;
     		display: block;
@@ -46,13 +61,14 @@ and (max-width : 480px) {
     				color: #ccc;
     			}
           ul.sub-menu {
-          	font-size: 1.0em;
+          	font-size: 0.8em;
           	margin: 0;
-          	display: none;
-          	position: absolute;
-            top: 0px;
-            left: 40%;
-            width: 60%;
+          	display: inline;
+            position: static;
+//            position: absolute;
+//            top: 0px;
+//            left: 40%;
+//            width: 60%;
             padding: 0;
           	li {
               border: none;
@@ -78,12 +94,15 @@ and (max-width : 480px) {
     #main {
       overflow-x: hidden;
       position: static;
+      padding: 0;
       #feed-container {
         position: static;
         margin: 0;
         padding: 0;
+        width: 100%;
       }
       article.post {
+        margin: 0 auto;
         .post-thumbnail {
           img {
             width: 278px;
@@ -94,19 +113,22 @@ and (max-width : 480px) {
     	.article-container-wrapper {
         display: block;
         clear: both;
-        max-width: 100%;
+        width: 100%;
       	.article-container {
-      		width: auto;
+      		width: 100%;
           margin: 0;
           article.post {
             width: 278px;
-            margin: inherit -2px;
+            margin: 1em auto;
             .post-thumbnail {
               img {
                 width: 278px;
                 height: auto;
               }
             }
+          }
+          article.post:last-child {
+            margin: 0 auto;
           }
       	}
     	}
@@ -119,9 +141,13 @@ and (max-width : 480px) {
         }
       }
       #home-sidebar, aside.sidebar {
-        width: $column_width - 24;
-        padding-left: 24px;
+        width: 100%;
         margin-bottom: 2em;
+        .article-container {
+          width: 278px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
       }
     }
     #main.horizontal {
@@ -139,7 +165,7 @@ and (max-width : 480px) {
                 height: auto;
               }
             }
-            margin-left: 0;
+//            margin-left: 0;
             max-width: 278px;
           }
         }

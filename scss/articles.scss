@@ -8,7 +8,7 @@ $thumbnail_width: $column_width - 60;
 $main_column: 640px;
 $main_featured: $main_column;
 
-$pink: #c31253;
+$pink: rgb(13, 63, 168);
 
 @mixin grey_post_meta {
 	.post-meta {
@@ -25,6 +25,16 @@ $pink: #c31253;
 body {
 	color: inherit;
   .ui-loader {
+    display: none;
+  }
+  a {
+    color: $pink;
+    text-decoration: none;
+  }
+}
+
+header {
+  #mobile-menu-link {
     display: none;
   }
 }
