@@ -467,6 +467,10 @@ body.home #main.horizontal, body.archive #main.horizontal {
         width: 278px;
         margin: 0 auto;
         padding: 0 20px; }
+    body.single #main #home-sidebar, body.single #main aside.sidebar, body.archive #main #home-sidebar, body.archive #main aside.sidebar, body.home #main #home-sidebar, body.home #main aside.sidebar, body.page #main #home-sidebar, body.page #main aside.sidebar {
+      width: 296px;
+      padding-left: 24px;
+      margin-bottom: 2em; }
   body.single #main.horizontal, body.archive #main.horizontal, body.home #main.horizontal, body.page #main.horizontal {
     width: 100%; }
     body.single #main.horizontal .content, body.archive #main.horizontal .content, body.home #main.horizontal .content, body.page #main.horizontal .content {

@@ -55,10 +55,7 @@ and (max-width : 480px) {
           	margin: 0;
           	display: inline;
             position: static;
-//            position: absolute;
-//            top: 0px;
-//            left: 40%;
-//            width: 60%;
+
             padding: 0;
           	li {
               border: none;
@@ -74,8 +71,6 @@ and (max-width : 480px) {
     	}
     }
     #mobile-menu-link {
-//      position: static;
-//      text-align: center;
       display: block;
       font-size: 1em;
       a {
@@ -151,6 +146,11 @@ and (max-width : 480px) {
           margin: 0 auto;
           padding: 0 20px;
         }
+      }
+      #home-sidebar, aside.sidebar {
+        width: $column_width - 24;
+        padding-left: 24px;
+        margin-bottom: 2em;
       }
     }
     #main.horizontal {
