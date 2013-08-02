@@ -1,5 +1,5 @@
 @media only screen 
-and (max-width : 480px) { 
+and (max-width : 760px) { 
   $column_width: 320px;
   $thumbnail_width: $column_width - 60;
   
@@ -73,6 +73,7 @@ and (max-width : 480px) {
     #mobile-menu-link {
       display: block;
       font-size: 1em;
+      margin: 1em auto;
       a {
       	color: #666;
       	text-decoration: none;
@@ -87,12 +88,21 @@ and (max-width : 480px) {
     padding: 0;
   }
   
+  
   /* Styles for block display on home page */
   body.single, body.archive, body.home, body.page {
     #main {
       overflow-x: hidden;
       position: static;
       padding: 0;
+      // Wordpress contact form 7
+      .wpcf7 {
+        width: 256px;
+        margin: 0 auto;
+        input, textarea {
+          width: 240px;
+        }
+      }
       #feed-container {
         position: static;
         margin: 0;
@@ -147,17 +157,13 @@ and (max-width : 480px) {
           padding: 0 20px;
         }
       }
-      #home-sidebar, aside.sidebar {
-        width: $column_width - 24;
-        padding-left: 24px;
-        margin-bottom: 2em;
-      }
     }
     #main.horizontal {
       width: 100%;
       .content {
         float: none;
         width: 100%;
+        max-width: 100%;
         .article-container {
           width: 320px;
           margin: 1em auto;
@@ -182,6 +188,7 @@ and (max-width : 480px) {
       #home-sidebar, aside.sidebar {
         width: 100%;
         margin: 0 auto 2em;
+        padding-left: 0;
         section {
           width: 278px;
           margin: 1em auto;

@@ -181,10 +181,10 @@ header #mobile-menu-link {
     #main article.post header h2, #main article.event header h2 {
       text-align: center; }
     #main article.post .post-thumbnail, #main article.event .post-thumbnail {
-      max-width: 640px;
+      max-width: 540px;
       margin: 0 auto; }
       #main article.post .post-thumbnail img, #main article.event .post-thumbnail img {
-        max-width: 640px;
+        max-width: 540px;
         height: auto; }
     #main article.post a, #main article.event a {
       color: #0d3fa8;
@@ -358,7 +358,7 @@ body.home #main.horizontal, body.archive #main.horizontal {
   height: auto;
   width: 320px; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 760px) {
   header .posts-nav-links {
     display: none;
     position: absolute;
@@ -416,7 +416,8 @@ body.home #main.horizontal, body.archive #main.horizontal {
         color: #888; }
   header #mobile-menu-link {
     display: block;
-    font-size: 1em; }
+    font-size: 1em;
+    margin: 1em auto; }
     header #mobile-menu-link a {
       color: #666;
       text-decoration: none; }
@@ -431,6 +432,11 @@ body.home #main.horizontal, body.archive #main.horizontal {
     overflow-x: hidden;
     position: static;
     padding: 0; }
+    body.single #main .wpcf7, body.archive #main .wpcf7, body.home #main .wpcf7, body.page #main .wpcf7 {
+      width: 256px;
+      margin: 0 auto; }
+      body.single #main .wpcf7 input, body.single #main .wpcf7 textarea, body.archive #main .wpcf7 input, body.archive #main .wpcf7 textarea, body.home #main .wpcf7 input, body.home #main .wpcf7 textarea, body.page #main .wpcf7 input, body.page #main .wpcf7 textarea {
+        width: 240px; }
     body.single #main #feed-container, body.archive #main #feed-container, body.home #main #feed-container, body.page #main #feed-container {
       position: static;
       margin: 0;
@@ -467,15 +473,12 @@ body.home #main.horizontal, body.archive #main.horizontal {
         width: 278px;
         margin: 0 auto;
         padding: 0 20px; }
-    body.single #main #home-sidebar, body.single #main aside.sidebar, body.archive #main #home-sidebar, body.archive #main aside.sidebar, body.home #main #home-sidebar, body.home #main aside.sidebar, body.page #main #home-sidebar, body.page #main aside.sidebar {
-      width: 296px;
-      padding-left: 24px;
-      margin-bottom: 2em; }
   body.single #main.horizontal, body.archive #main.horizontal, body.home #main.horizontal, body.page #main.horizontal {
     width: 100%; }
     body.single #main.horizontal .content, body.archive #main.horizontal .content, body.home #main.horizontal .content, body.page #main.horizontal .content {
       float: none;
-      width: 100%; }
+      width: 100%;
+      max-width: 100%; }
       body.single #main.horizontal .content .article-container, body.archive #main.horizontal .content .article-container, body.home #main.horizontal .content .article-container, body.page #main.horizontal .content .article-container {
         width: 320px;
         margin: 1em auto; }
@@ -492,7 +495,8 @@ body.home #main.horizontal, body.archive #main.horizontal {
           margin: 0 auto; }
     body.single #main.horizontal #home-sidebar, body.single #main.horizontal aside.sidebar, body.archive #main.horizontal #home-sidebar, body.archive #main.horizontal aside.sidebar, body.home #main.horizontal #home-sidebar, body.home #main.horizontal aside.sidebar, body.page #main.horizontal #home-sidebar, body.page #main.horizontal aside.sidebar {
       width: 100%;
-      margin: 0 auto 2em; }
+      margin: 0 auto 2em;
+      padding-left: 0; }
       body.single #main.horizontal #home-sidebar section, body.single #main.horizontal aside.sidebar section, body.archive #main.horizontal #home-sidebar section, body.archive #main.horizontal aside.sidebar section, body.home #main.horizontal #home-sidebar section, body.home #main.horizontal aside.sidebar section, body.page #main.horizontal #home-sidebar section, body.page #main.horizontal aside.sidebar section {
         width: 278px;
         margin: 1em auto; } }

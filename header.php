@@ -57,5 +57,5 @@
 				'container' => 'nav',
 				'container_class' => 'primary-menu',
 				)); ?>
-        <div id="mobile-menu-link"><a href="#menu-primary-menu" onclick="jQuery('#menu-primary-menu').toggle();">Menu</a></div>
+        <div id="mobile-menu-link"><a href="#menu-primary-menu" onclick="jQuery('#menu-primary-menu').toggle();">MENU</a></div>
     </header>

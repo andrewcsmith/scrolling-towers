@@ -6,7 +6,7 @@ $column_width: 420px;
 $thumbnail_width: $column_width - 60;
 
 $main_column: 640px;
-$main_featured: $main_column;
+$main_featured: $main_column - 100px;
 
 $pink: rgb(13, 63, 168);
 
